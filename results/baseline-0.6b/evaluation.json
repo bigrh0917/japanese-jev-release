@@ -1,0 +1,1157 @@
+{
+  "base_model": "models/Qwen3-0.6B-Base",
+  "adapter": null,
+  "temperature": {
+    "choice": 1.0,
+    "noul": 1.0,
+    "score": 1.0
+  },
+  "in_distribution": {
+    "valid": {
+      "n": 1000,
+      "kinds": {
+        "choice": 341,
+        "score": 347,
+        "noul": 312
+      },
+      "sources": {
+        "kuci": 125,
+        "jsts": 244,
+        "jnli": 122,
+        "mewsc16": 94,
+        "jsick": 207,
+        "pawsx_ja": 208
+      },
+      "uncalibrated": {
+        "n": 1000,
+        "T": 1.0,
+        "accuracy": 0.43,
+        "within1": 0.789,
+        "ece": 0.0597,
+        "brier": 0.6776,
+        "nll": 1.3074,
+        "automation_2pct": 0.008,
+        "automation_5pct": 0.008
+      },
+      "calibrated": {
+        "n": 1000,
+        "T": 1.0,
+        "accuracy": 0.43,
+        "within1": 0.789,
+        "ece": 0.0597,
+        "brier": 0.6776,
+        "nll": 1.3074,
+        "automation_2pct": 0.008,
+        "automation_5pct": 0.008
+      },
+      "p50_latency_ms": 22.48,
+      "permutation_consistency": 0.5775,
+      "reliability_calibrated": [
+        {
+          "lo": 0.133,
+          "hi": 0.2,
+          "count": 10,
+          "confidence": 0.1909,
+          "accuracy": 0.3
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.267,
+          "count": 36,
+          "confidence": 0.2372,
+          "accuracy": 0.2222
+        },
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 94,
+          "confidence": 0.3072,
+          "accuracy": 0.3085
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 241,
+          "confidence": 0.3681,
+          "accuracy": 0.3237
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 190,
+          "confidence": 0.4274,
+          "accuracy": 0.3053
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 122,
+          "confidence": 0.5152,
+          "accuracy": 0.4754
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 178,
+          "confidence": 0.5765,
+          "accuracy": 0.6292
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 104,
+          "confidence": 0.6288,
+          "accuracy": 0.6635
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 17,
+          "confidence": 0.6905,
+          "accuracy": 0.4118
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 4,
+          "confidence": 0.7606,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.867,
+          "count": 3,
+          "confidence": 0.8521,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.867,
+          "hi": 0.933,
+          "count": 1,
+          "confidence": 0.904,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 341,
+            "T": 1.0,
+            "accuracy": 0.3812,
+            "within1": 0.6774,
+            "ece": 0.0848,
+            "brier": 0.7236,
+            "nll": 1.4577,
+            "automation_2pct": 0.0235,
+            "automation_5pct": 0.0235
+          },
+          "calibrated": {
+            "n": 341,
+            "T": 1.0,
+            "accuracy": 0.3812,
+            "within1": 0.6774,
+            "ece": 0.0848,
+            "brier": 0.7236,
+            "nll": 1.4577,
+            "automation_2pct": 0.0235,
+            "automation_5pct": 0.0235
+          }
+        },
+        "noul": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 312,
+            "T": 1.0,
+            "accuracy": 0.6538,
+            "within1": 1.0,
+            "ece": 0.0871,
+            "brier": 0.4567,
+            "nll": 0.6494,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          },
+          "calibrated": {
+            "n": 312,
+            "T": 1.0,
+            "accuracy": 0.6538,
+            "within1": 1.0,
+            "ece": 0.0871,
+            "brier": 0.4567,
+            "nll": 0.6494,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          }
+        },
+        "score": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 347,
+            "T": 1.0,
+            "accuracy": 0.2767,
+            "within1": 0.7089,
+            "ece": 0.1077,
+            "brier": 0.831,
+            "nll": 1.7514,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          },
+          "calibrated": {
+            "n": 347,
+            "T": 1.0,
+            "accuracy": 0.2767,
+            "within1": 0.7089,
+            "ece": 0.1077,
+            "brier": 0.831,
+            "nll": 1.7514,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          }
+        }
+      }
+    }
+  },
+  "out_of_distribution": {
+    "jcommonsenseqa": {
+      "n": 500,
+      "kinds": {
+        "choice": 500
+      },
+      "sources": {
+        "jcommonsenseqa": 500
+      },
+      "uncalibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.542,
+        "within1": 0.708,
+        "ece": 0.1206,
+        "brier": 0.6018,
+        "nll": 1.2037,
+        "automation_2pct": 0.068,
+        "automation_5pct": 0.124
+      },
+      "calibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.542,
+        "within1": 0.708,
+        "ece": 0.1206,
+        "brier": 0.6018,
+        "nll": 1.2037,
+        "automation_2pct": 0.068,
+        "automation_5pct": 0.124
+      },
+      "p50_latency_ms": 22.36,
+      "permutation_consistency": 0.53,
+      "reliability_calibrated": [
+        {
+          "lo": 0.2,
+          "hi": 0.267,
+          "count": 27,
+          "confidence": 0.2548,
+          "accuracy": 0.3704
+        },
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 110,
+          "confidence": 0.3002,
+          "accuracy": 0.3455
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 142,
+          "confidence": 0.366,
+          "accuracy": 0.3803
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 77,
+          "confidence": 0.4301,
+          "accuracy": 0.5455
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 49,
+          "confidence": 0.4969,
+          "accuracy": 0.8163
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 40,
+          "confidence": 0.5609,
+          "accuracy": 0.875
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 20,
+          "confidence": 0.6315,
+          "accuracy": 0.9
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 17,
+          "confidence": 0.6923,
+          "accuracy": 0.9412
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 10,
+          "confidence": 0.7673,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.867,
+          "count": 6,
+          "confidence": 0.839,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.867,
+          "hi": 0.933,
+          "count": 2,
+          "confidence": 0.903,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.542,
+            "within1": 0.708,
+            "ece": 0.1206,
+            "brier": 0.6018,
+            "nll": 1.2037,
+            "automation_2pct": 0.068,
+            "automation_5pct": 0.124
+          },
+          "calibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.542,
+            "within1": 0.708,
+            "ece": 0.1206,
+            "brier": 0.6018,
+            "nll": 1.2037,
+            "automation_2pct": 0.068,
+            "automation_5pct": 0.124
+          }
+        }
+      }
+    },
+    "massive_ja": {
+      "n": 500,
+      "kinds": {
+        "choice": 500
+      },
+      "sources": {
+        "massive_ja": 500
+      },
+      "uncalibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.608,
+        "within1": 0.65,
+        "ece": 0.259,
+        "brier": 0.5798,
+        "nll": 1.3072,
+        "automation_2pct": 0.33,
+        "automation_5pct": 0.408
+      },
+      "calibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.608,
+        "within1": 0.65,
+        "ece": 0.259,
+        "brier": 0.5798,
+        "nll": 1.3072,
+        "automation_2pct": 0.33,
+        "automation_5pct": 0.408
+      },
+      "p50_latency_ms": 22.54,
+      "permutation_consistency": 0.58,
+      "reliability_calibrated": [
+        {
+          "lo": 0.133,
+          "hi": 0.2,
+          "count": 23,
+          "confidence": 0.1848,
+          "accuracy": 0.1304
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.267,
+          "count": 145,
+          "confidence": 0.2365,
+          "accuracy": 0.2138
+        },
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 99,
+          "confidence": 0.2978,
+          "accuracy": 0.5152
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 63,
+          "confidence": 0.3652,
+          "accuracy": 0.8571
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 50,
+          "confidence": 0.431,
+          "accuracy": 0.9
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 36,
+          "confidence": 0.5019,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 30,
+          "confidence": 0.5686,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 31,
+          "confidence": 0.6284,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 16,
+          "confidence": 0.6877,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 5,
+          "confidence": 0.7587,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.867,
+          "count": 2,
+          "confidence": 0.8087,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.608,
+            "within1": 0.65,
+            "ece": 0.259,
+            "brier": 0.5798,
+            "nll": 1.3072,
+            "automation_2pct": 0.33,
+            "automation_5pct": 0.408
+          },
+          "calibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.608,
+            "within1": 0.65,
+            "ece": 0.259,
+            "brier": 0.5798,
+            "nll": 1.3072,
+            "automation_2pct": 0.33,
+            "automation_5pct": 0.408
+          }
+        }
+      }
+    },
+    "livedoor": {
+      "n": 500,
+      "kinds": {
+        "choice": 500
+      },
+      "sources": {
+        "livedoor": 500
+      },
+      "uncalibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.406,
+        "within1": 0.538,
+        "ece": 0.1148,
+        "brier": 0.8013,
+        "nll": 2.0068,
+        "automation_2pct": 0.004,
+        "automation_5pct": 0.004
+      },
+      "calibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.406,
+        "within1": 0.538,
+        "ece": 0.1148,
+        "brier": 0.8013,
+        "nll": 2.0068,
+        "automation_2pct": 0.004,
+        "automation_5pct": 0.004
+      },
+      "p50_latency_ms": 27.78,
+      "permutation_consistency": 0.305,
+      "reliability_calibrated": [
+        {
+          "lo": 0.133,
+          "hi": 0.2,
+          "count": 23,
+          "confidence": 0.1898,
+          "accuracy": 0.087
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.267,
+          "count": 142,
+          "confidence": 0.2409,
+          "accuracy": 0.2254
+        },
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 187,
+          "confidence": 0.3006,
+          "accuracy": 0.4278
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 85,
+          "confidence": 0.3618,
+          "accuracy": 0.5176
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 40,
+          "confidence": 0.4296,
+          "accuracy": 0.75
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 14,
+          "confidence": 0.4921,
+          "accuracy": 0.5714
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 7,
+          "confidence": 0.5581,
+          "accuracy": 0.7143
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 2,
+          "confidence": 0.6081,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.406,
+            "within1": 0.538,
+            "ece": 0.1148,
+            "brier": 0.8013,
+            "nll": 2.0068,
+            "automation_2pct": 0.004,
+            "automation_5pct": 0.004
+          },
+          "calibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.406,
+            "within1": 0.538,
+            "ece": 0.1148,
+            "brier": 0.8013,
+            "nll": 2.0068,
+            "automation_2pct": 0.004,
+            "automation_5pct": 0.004
+          }
+        }
+      }
+    },
+    "wrime": {
+      "n": 500,
+      "kinds": {
+        "score": 500
+      },
+      "sources": {
+        "wrime": 500
+      },
+      "uncalibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.038,
+        "within1": 0.18,
+        "ece": 0.3457,
+        "brier": 1.039,
+        "nll": 2.1354,
+        "automation_2pct": 0.0,
+        "automation_5pct": 0.0
+      },
+      "calibrated": {
+        "n": 500,
+        "T": 1.0,
+        "accuracy": 0.038,
+        "within1": 0.18,
+        "ece": 0.3457,
+        "brier": 1.039,
+        "nll": 2.1354,
+        "automation_2pct": 0.0,
+        "automation_5pct": 0.0
+      },
+      "p50_latency_ms": 22.53,
+      "permutation_consistency": null,
+      "reliability_calibrated": [
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 18,
+          "confidence": 0.3253,
+          "accuracy": 0.1111
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 355,
+          "confidence": 0.3735,
+          "accuracy": 0.0394
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 124,
+          "confidence": 0.4192,
+          "accuracy": 0.0242
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 3,
+          "confidence": 0.4771,
+          "accuracy": 0.0
+        }
+      ],
+      "per_kind": {
+        "score": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.038,
+            "within1": 0.18,
+            "ece": 0.3457,
+            "brier": 1.039,
+            "nll": 2.1354,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          },
+          "calibrated": {
+            "n": 500,
+            "T": 1.0,
+            "accuracy": 0.038,
+            "within1": 0.18,
+            "ece": 0.3457,
+            "brier": 1.039,
+            "nll": 2.1354,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          }
+        }
+      }
+    },
+    "ja_ambiguity": {
+      "n": 300,
+      "kinds": {
+        "score": 85,
+        "choice": 160,
+        "noul": 55
+      },
+      "sources": {
+        "ja_ambiguity": 300
+      },
+      "uncalibrated": {
+        "n": 300,
+        "T": 1.0,
+        "accuracy": 0.39,
+        "within1": 0.8333,
+        "ece": 0.1147,
+        "brier": 0.661,
+        "nll": 1.1282,
+        "automation_2pct": 0.0067,
+        "automation_5pct": 0.0067
+      },
+      "calibrated": {
+        "n": 300,
+        "T": 1.0,
+        "accuracy": 0.39,
+        "within1": 0.8333,
+        "ece": 0.1147,
+        "brier": 0.661,
+        "nll": 1.1282,
+        "automation_2pct": 0.0067,
+        "automation_5pct": 0.0067
+      },
+      "p50_latency_ms": 22.86,
+      "permutation_consistency": 0.53,
+      "reliability_calibrated": [
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 18,
+          "confidence": 0.3118,
+          "accuracy": 0.1667
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 58,
+          "confidence": 0.3632,
+          "accuracy": 0.3276
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 51,
+          "confidence": 0.4336,
+          "accuracy": 0.3333
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 72,
+          "confidence": 0.5099,
+          "accuracy": 0.3333
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 54,
+          "confidence": 0.5682,
+          "accuracy": 0.537
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 19,
+          "confidence": 0.6235,
+          "accuracy": 0.3158
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 14,
+          "confidence": 0.6964,
+          "accuracy": 0.6429
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 4,
+          "confidence": 0.785,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.867,
+          "count": 6,
+          "confidence": 0.8478,
+          "accuracy": 0.5
+        },
+        {
+          "lo": 0.867,
+          "hi": 0.933,
+          "count": 3,
+          "confidence": 0.8712,
+          "accuracy": 0.6667
+        },
+        {
+          "lo": 0.933,
+          "hi": 1.0,
+          "count": 1,
+          "confidence": 0.9404,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 160,
+            "T": 1.0,
+            "accuracy": 0.4313,
+            "within1": 0.8187,
+            "ece": 0.1252,
+            "brier": 0.6585,
+            "nll": 1.1156,
+            "automation_2pct": 0.0187,
+            "automation_5pct": 0.0187
+          },
+          "calibrated": {
+            "n": 160,
+            "T": 1.0,
+            "accuracy": 0.4313,
+            "within1": 0.8187,
+            "ece": 0.1252,
+            "brier": 0.6585,
+            "nll": 1.1156,
+            "automation_2pct": 0.0187,
+            "automation_5pct": 0.0187
+          }
+        },
+        "noul": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 55,
+            "T": 1.0,
+            "accuracy": 0.5091,
+            "within1": 1.0,
+            "ece": 0.1453,
+            "brier": 0.4745,
+            "nll": 0.6664,
+            "automation_2pct": 0.1091,
+            "automation_5pct": 0.1091
+          },
+          "calibrated": {
+            "n": 55,
+            "T": 1.0,
+            "accuracy": 0.5091,
+            "within1": 1.0,
+            "ece": 0.1453,
+            "brier": 0.4745,
+            "nll": 0.6664,
+            "automation_2pct": 0.1091,
+            "automation_5pct": 0.1091
+          }
+        },
+        "score": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 85,
+            "T": 1.0,
+            "accuracy": 0.2353,
+            "within1": 0.7529,
+            "ece": 0.1732,
+            "brier": 0.7862,
+            "nll": 1.4507,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          },
+          "calibrated": {
+            "n": 85,
+            "T": 1.0,
+            "accuracy": 0.2353,
+            "within1": 0.7529,
+            "ece": 0.1732,
+            "brier": 0.7862,
+            "nll": 1.4507,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          }
+        }
+      }
+    },
+    "ja_knowledge": {
+      "n": 200,
+      "kinds": {
+        "choice": 170,
+        "noul": 30
+      },
+      "sources": {
+        "ja_knowledge": 200
+      },
+      "uncalibrated": {
+        "n": 200,
+        "T": 1.0,
+        "accuracy": 0.4,
+        "within1": 0.71,
+        "ece": 0.1087,
+        "brier": 0.6754,
+        "nll": 1.2099,
+        "automation_2pct": 0.03,
+        "automation_5pct": 0.03
+      },
+      "calibrated": {
+        "n": 200,
+        "T": 1.0,
+        "accuracy": 0.4,
+        "within1": 0.71,
+        "ece": 0.1087,
+        "brier": 0.6754,
+        "nll": 1.2099,
+        "automation_2pct": 0.03,
+        "automation_5pct": 0.03
+      },
+      "p50_latency_ms": 22.42,
+      "permutation_consistency": 0.4975,
+      "reliability_calibrated": [
+        {
+          "lo": 0.267,
+          "hi": 0.333,
+          "count": 11,
+          "confidence": 0.2997,
+          "accuracy": 0.1818
+        },
+        {
+          "lo": 0.333,
+          "hi": 0.4,
+          "count": 59,
+          "confidence": 0.3695,
+          "accuracy": 0.3051
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.467,
+          "count": 25,
+          "confidence": 0.436,
+          "accuracy": 0.16
+        },
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 28,
+          "confidence": 0.5007,
+          "accuracy": 0.4286
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 29,
+          "confidence": 0.5635,
+          "accuracy": 0.4483
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 29,
+          "confidence": 0.631,
+          "accuracy": 0.5517
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 9,
+          "confidence": 0.7004,
+          "accuracy": 0.7778
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 5,
+          "confidence": 0.7719,
+          "accuracy": 0.6
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.867,
+          "count": 2,
+          "confidence": 0.85,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.867,
+          "hi": 0.933,
+          "count": 1,
+          "confidence": 0.8923,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.933,
+          "hi": 1.0,
+          "count": 2,
+          "confidence": 0.9368,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "choice": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 170,
+            "T": 1.0,
+            "accuracy": 0.3824,
+            "within1": 0.6588,
+            "ece": 0.1218,
+            "brier": 0.7006,
+            "nll": 1.295,
+            "automation_2pct": 0.0353,
+            "automation_5pct": 0.0353
+          },
+          "calibrated": {
+            "n": 170,
+            "T": 1.0,
+            "accuracy": 0.3824,
+            "within1": 0.6588,
+            "ece": 0.1218,
+            "brier": 0.7006,
+            "nll": 1.295,
+            "automation_2pct": 0.0353,
+            "automation_5pct": 0.0353
+          }
+        },
+        "noul": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 30,
+            "T": 1.0,
+            "accuracy": 0.5,
+            "within1": 1.0,
+            "ece": 0.106,
+            "brier": 0.5322,
+            "nll": 0.7274,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          },
+          "calibrated": {
+            "n": 30,
+            "T": 1.0,
+            "accuracy": 0.5,
+            "within1": 1.0,
+            "ece": 0.106,
+            "brier": 0.5322,
+            "nll": 0.7274,
+            "automation_2pct": 0.0,
+            "automation_5pct": 0.0
+          }
+        }
+      }
+    },
+    "ja_negation": {
+      "n": 100,
+      "kinds": {
+        "noul": 100
+      },
+      "sources": {
+        "ja_negation": 100
+      },
+      "uncalibrated": {
+        "n": 100,
+        "T": 1.0,
+        "accuracy": 0.54,
+        "within1": 1.0,
+        "ece": 0.1267,
+        "brier": 0.4868,
+        "nll": 0.6787,
+        "automation_2pct": 0.12,
+        "automation_5pct": 0.12
+      },
+      "calibrated": {
+        "n": 100,
+        "T": 1.0,
+        "accuracy": 0.54,
+        "within1": 1.0,
+        "ece": 0.1267,
+        "brier": 0.4868,
+        "nll": 0.6787,
+        "automation_2pct": 0.12,
+        "automation_5pct": 0.12
+      },
+      "p50_latency_ms": 22.45,
+      "permutation_consistency": null,
+      "reliability_calibrated": [
+        {
+          "lo": 0.467,
+          "hi": 0.533,
+          "count": 21,
+          "confidence": 0.5223,
+          "accuracy": 0.5238
+        },
+        {
+          "lo": 0.533,
+          "hi": 0.6,
+          "count": 45,
+          "confidence": 0.5791,
+          "accuracy": 0.5111
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.667,
+          "count": 19,
+          "confidence": 0.6331,
+          "accuracy": 0.3158
+        },
+        {
+          "lo": 0.667,
+          "hi": 0.733,
+          "count": 14,
+          "confidence": 0.6924,
+          "accuracy": 0.9286
+        },
+        {
+          "lo": 0.733,
+          "hi": 0.8,
+          "count": 1,
+          "confidence": 0.7549,
+          "accuracy": 1.0
+        }
+      ],
+      "per_kind": {
+        "noul": {
+          "T": 1.0,
+          "uncalibrated": {
+            "n": 100,
+            "T": 1.0,
+            "accuracy": 0.54,
+            "within1": 1.0,
+            "ece": 0.1267,
+            "brier": 0.4868,
+            "nll": 0.6787,
+            "automation_2pct": 0.12,
+            "automation_5pct": 0.12
+          },
+          "calibrated": {
+            "n": 100,
+            "T": 1.0,
+            "accuracy": 0.54,
+            "within1": 1.0,
+            "ece": 0.1267,
+            "brier": 0.4868,
+            "nll": 0.6787,
+            "automation_2pct": 0.12,
+            "automation_5pct": 0.12
+          }
+        }
+      }
+    }
+  },
+  "final": false,
+  "shots": 0
+}

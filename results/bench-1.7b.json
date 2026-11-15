@@ -1,0 +1,63 @@
+{
+  "source": "jcommonsenseqa",
+  "items": 200,
+  "rounds": 3,
+  "batch": {
+    "1": {
+      "per_item_ms": 25.6,
+      "same_answer_as_single": 1.0
+    },
+    "8": {
+      "per_item_ms": 12.23,
+      "same_answer_as_single": 0.985
+    },
+    "16": {
+      "per_item_ms": 12.26,
+      "same_answer_as_single": 0.99
+    },
+    "32": {
+      "per_item_ms": 13.92,
+      "same_answer_as_single": 0.99
+    }
+  },
+  "generate": {
+    "json_example": "{\"answer\": \"B\", \"confidence\": 0.85}",
+    "new_tokens": 15,
+    "items": 100,
+    "1 token (letter only)": {
+      "p50_ms": 26.41,
+      "p90_ms": 27.48
+    },
+    "15 tokens (JSON answer)": {
+      "p50_ms": 344.25,
+      "p90_ms": 351.85
+    }
+  },
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "settings": {
+    "LoRA unmerged": {
+      "prompt_tokens_mean": 79.8,
+      "tokenize_p50_ms": 0.3,
+      "forward_p50_ms": 43.19,
+      "forward_p90_ms": 45.0,
+      "total_p50_ms": 43.5,
+      "samples": 600
+    },
+    "LoRA merged": {
+      "prompt_tokens_mean": 79.8,
+      "tokenize_p50_ms": 0.25,
+      "forward_p50_ms": 24.72,
+      "forward_p90_ms": 25.53,
+      "total_p50_ms": 24.97,
+      "samples": 600
+    },
+    "merged + 4 shots": {
+      "prompt_tokens_mean": 740.8,
+      "tokenize_p50_ms": 1.17,
+      "forward_p50_ms": 92.59,
+      "forward_p90_ms": 98.48,
+      "total_p50_ms": 93.79,
+      "samples": 600
+    }
+  }
+}

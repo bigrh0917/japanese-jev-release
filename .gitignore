@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# base models and files built from public data are not included
+models/
+data/
+data_ft*/
+data_distill/
+
+# training outputs
+runs/
+
+# weights are distributed on Hugging Face (uploaded with hf upload)
+hf_model_*/

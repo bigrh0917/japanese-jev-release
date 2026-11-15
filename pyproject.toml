@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "japanese-jev"
+version = "0.1.0"
+description = "A System One (Jev-style) typed decision model for Japanese, trained on a laptop"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "datasets>=4.0",
+    "huggingface-hub>=0.30",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pykakasi>=2.2",
+    "jaconv>=0.3",
+    "torch>=2.6",
+    "transformers>=5.2",
+    "peft>=0.17",
+    "mlx-lm[train]>=0.32; sys_platform == 'darwin'",
+    "trl>=1.0; sys_platform == 'linux'",
+]
+
+[project.scripts]
+japanese-jev = "japanese_jev.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/japanese_jev"]
+
+[tool.uv]
+# torch comes from PyPI on Mac (CPU/MPS build) and from the PyTorch CUDA 12.8 index on Linux
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'linux'" }]

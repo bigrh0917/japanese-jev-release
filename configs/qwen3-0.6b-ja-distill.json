@@ -1,0 +1,83 @@
+{
+  "run_name": "qwen3-0.6b-ja-distill",
+  "base_model": "models/Qwen3-0.6B-Base",
+  "data_dir": "data_distill",
+  "work_dir": "runs/qwen3-0.6b-ja-distill",
+  "seed": 42,
+  "train_sources": [
+    "jnli",
+    "jsick",
+    "jsts",
+    "kuci",
+    "pawsx_ja",
+    "mewsc16",
+    "synthetic"
+  ],
+  "eval_sources": [
+    "jcommonsenseqa",
+    "massive_ja",
+    "livedoor",
+    "wrime",
+    "jcola",
+    "ja_ambiguity",
+    "ja_knowledge",
+    "ja_negation"
+  ],
+  "calib_sources": [
+    "sib200"
+  ],
+  "split_sizes": {
+    "valid": 1000,
+    "calib": 1000
+  },
+  "eval_items_per_source": 500,
+  "augment_ratio": 0.25,
+  "source_limits": {
+    "kuci": 10000,
+    "pawsx_ja": 10000
+  },
+  "max_per_kind": 16000,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "train": {
+    "epochs": 1,
+    "batch_size": 8,
+    "accumulation": 1,
+    "lr": 0.0001,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.03,
+    "max_len": 512,
+    "precision": "bf16",
+    "logging_steps": 20,
+    "eval_steps": 200,
+    "save_steps": 200
+  },
+  "calibration": {
+    "split": "calib",
+    "per_kind": true,
+    "ece_bins": 15,
+    "fallback_split": "calib"
+  },
+  "serve": {
+    "host": "127.0.0.1",
+    "port": 8000
+  },
+  "source_weights": {
+    "synthetic": 5
+  },
+  "distill": {
+    "alpha": 0.5
+  }
+}
